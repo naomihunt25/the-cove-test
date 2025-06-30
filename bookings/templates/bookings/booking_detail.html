@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking details</title>
+</head>
+<body>
+    <h1>Booking Detail</h1>
+    <p><strong>Name:</strong> {{ booking.first_name }} {{ booking.last_name }}</p>
+    <p><strong>Email:</strong> {{ booking.email }}</p>
+    <p><strong>Phone:</strong> {{ booking.phone_number }}</p>
+    <p><strong>Date:</strong> {{ booking.booking_date }}</p>
+    <p><strong>Time:</strong> {{ booking.booking_time }}</p>
+    <p><strong>Message:</strong> {{ booking.message }}</p>
+    <a href="{% url 'booking_list' %}">Back to all bookings</a>
+</body>
+</html>
