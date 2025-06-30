@@ -31,7 +31,7 @@ def booking_update(request, pk):
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
-            return redirect('booking_detail', pk=booking.pk)  # Redirect to detail page
+            return redirect('booking_detail', pk=booking.pk)
     else:
         form = BookingForm(instance=booking)
     return render(request, 'bookings/booking_form.html', {'form': form, 'update': True})
