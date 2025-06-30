@@ -17,8 +17,13 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from django.shortcuts import redirect  # ADD THIS IMPORT
+
+def home_redirect(request):
+    return redirect('/bookings/')
 
 urlpatterns = [
+    path('', home_redirect, name='home'),
     path('admin/', admin.site.urls),
     path('bookings/', include('bookings.urls')),
     path('accounts/', include('django.contrib.auth.urls')),

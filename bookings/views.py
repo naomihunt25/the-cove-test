@@ -6,6 +6,10 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
 
 # Create your views here.
+def index(request):
+    """Welcome/home page view"""
+    return render(request, 'bookings/index.html')  # Template is in bookings/templates/
+
 @login_required
 def booking_create(request):
     if request.method == 'POST':
@@ -22,10 +26,6 @@ def booking_create(request):
 def booking_success(request):
     return render(request, 'bookings/booking_success.html')
 
-
-def booking_list(request):
-    bookings = Booking.objects.all().order_by('-booking_date', '-booking_time')
-    return render(request, 'bookings/booking_list.html', {'bookings': bookings})
 
 def booking_detail(request, pk):
     booking = get_object_or_404(Booking, pk=pk)
