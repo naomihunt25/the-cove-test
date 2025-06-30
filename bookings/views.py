@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import BookingForm
 from .models import Booking
+from django.views.decorators.http import require_POST
 
 # Create your views here.
 def booking_create(request):
@@ -35,3 +36,11 @@ def booking_update(request, pk):
     else:
         form = BookingForm(instance=booking)
     return render(request, 'bookings/booking_form.html', {'form': form, 'update': True})
+
+from django.views.decorators.http import require_POST
+
+@require_POST
+def booking_delete(request, pk):
+    booking = get_object_or_404(Booking, pk=pk)
+    booking.delete()
+    return redirect('booking_list')
