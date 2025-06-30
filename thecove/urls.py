@@ -17,14 +17,10 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from django.shortcuts import redirect  # ADD THIS IMPORT
-
-def home_redirect(request):
-    return redirect('/bookings/')
 
 urlpatterns = [
-    path('', home_redirect, name='home'),
+    path('', include('bookings.urls')),  # This will serve your index.html at the root
     path('admin/', admin.site.urls),
-    path('bookings/', include('bookings.urls')),
+    path('bookings/', include('bookings.urls')),  # Keep this for /bookings/ URLs too
     path('accounts/', include('django.contrib.auth.urls')),
 ]
