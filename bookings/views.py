@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .forms import BookingForm
+from .models import Booking
 
 # Create your views here.
 def booking_create(request):
