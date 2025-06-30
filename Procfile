@@ -1,1 +1,1 @@
-web: gunicorn the-cove-test.wsgi 
+web: gunicorn thecove.wsgi

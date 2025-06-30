@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-n17yga8m=dq)!u(-%o327zf_e1i-t4!fjg@zr4hjmf-y4j&-ox
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'the-cove-test.herokuapp.com']
 
 
 # Application definition
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'thecove.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.parse(
-        os.environ.get("DATABASE_URL") or "postgresql://neondb_owner:npg_0KpNcgDs2ukI@ep-old-snow-a2yd6utk.eu-central-1.aws.neon.tech/botch_young_siren_682172"
+        os.environ.get('DATABASE_URL', 'postgresql://neondb_owner:npg_0KpNcgDs2ukI@ep-old-snow-a2yd6utk.eu-central-1.aws.neon.tech/dug_truck_dense_177056')
     )
 }
 
@@ -116,7 +116,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+# During development
+STATICFILES_DIRS = [BASE_DIR / 'static']
+
+# For production (collectstatic command will use this)
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
