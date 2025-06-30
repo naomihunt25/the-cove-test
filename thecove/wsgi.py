@@ -1,5 +1,5 @@
 """
-WSGI config for cove project.
+WSGI config for thecove project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
