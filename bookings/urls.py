@@ -1,8 +1,12 @@
 from django.urls import path
-from . import views 
+from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),  # This serves index.html at both / and /bookings/
+    path('', views.index, name='index'),
+    path('about/', views.about, name='about'),
+    path('menu/', views.menu, name='menu'),
+    path('contact/', views.contact, name='contact'),
+    path('bookings/', views.bookings, name='bookings'),
     path('list/', views.booking_list, name='booking_list'),
     path('new/', views.booking_create, name='booking_create'),
     path('success/', views.booking_success, name='booking_success'),

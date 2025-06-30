@@ -1,0 +1,222 @@
+/* Google fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Bootstrap CSS import */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+/* CSS Variables */
+:root {
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Merriweather", serif;
+  --primary-color: #113859;
+  /* dark blue */
+  --secondary-color: #f38b10;
+  /* burnt orange */
+  --highlight-color: #ffffff;
+  /* white */
+}
+
+/* Global styles */
+body {
+  font-family: var(--primary-font);
+  padding-top: 40px;
+  /* top of header pushed down making it visible under fixed navbar */
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--secondary-font);
+}
+
+h2 {
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+
+.lead {
+    color: var(--primary-color);
+}
+
+.section {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+/* Buttons */
+.custom-button-outline {
+  border: 3px solid var(--secondary-color);
+  padding: 7px 25px;
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+.custom-button-outline:hover {
+  color: white;
+  background-color: var(--secondary-color);
+  transition: color 0.3s ease-in-out;
+}
+
+/* Navbar */
+#navbar {
+  background-color: white;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding-top: 1.5rem;
+}
+
+#navbar .logo {
+  width: 5rem;
+}
+
+#navbar .navbar-brand,
+.nav-link,
+.navbar-toggler {
+  color: var(--primary-color);
+}
+
+#navbar a:hover {
+  color: var(--secondary-color) !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand,
+.nav-item {
+  font-size: 1rem;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("../images/silas-cove-hero.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  background-color: rgba(17, 56, 89, 0.8);
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: var(--highlight-color);
+  text-align: center;
+}
+
+.hero-content p {
+    color: var(--highlight-color);
+}
+
+.intro {
+  padding: 2rem;
+  color: var(--primary-color);
+}
+
+/* About Us page */
+
+.custom-text-color th,
+.custom-text-color td {
+  color: var(--primary-color) !important;
+  font-size: 1.5rem;
+}
+
+.map {
+    position: center;
+}
+
+/* Bookings page */
+form {
+  background-color: #ffffff;
+  border: 2px solid #113859;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(17, 56, 89, 0.1);
+}
+
+
+/* Contact Us page */
+
+#contact p {
+    color: var(--primary-color);
+}
+#contact-form {
+  padding-bottom: 4rem;
+}
+
+/* Success page */
+.success p {
+  color: var(--primary-color);
+  padding-bottom: 1rem;
+}
+
+.success h1 {
+  padding-bottom: 1rem;
+}
+
+/* Footer section */
+/*Contact section */
+#contact {
+  background-color: var(--secondary-color);
+  color: white;
+  padding-top: 3rem;
+}
+
+#contact h2 {
+  color: white;
+}
+
+#contact i {
+  color: var(--highlight-color);
+  margin-right: 10px;
+}
+
+#contact .social-favicons i {
+  color: var(--highlight-color);
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  padding-inline-start: 2rem;
+}
+
+#contact .social-favicons i:hover {
+  color: var(--primary-color);
+  transition: color 0.3s ease-in-out;
+}
+
+/* Copyright section */
+.copyright p {
+  color: var(--highlight-color);
+  font-size: 12px;
+}
+
+/* Media queries */
+/* Carousel max width default (mobile first) */
+.silas-carousel {
+  max-width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media (min-width: 768px) {
+  .silas-carousel {
+    max-width: 600px;
+    padding: 0;
+  }
+}
+
+/* Media query: large devices (small laptops, 992px and up) */
+@media (min-width: 992px) {
+  .silas-carousel {
+    max-width: 800px;
+  }
+}

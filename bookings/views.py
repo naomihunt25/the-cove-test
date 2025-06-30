@@ -7,7 +7,19 @@ from django.http import HttpResponseForbidden
 
 # Create your views here.
 def index(request):
-    return render(request, 'bookings/index.html')
+    return render(request, 'index.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+def menu(request):
+    return render(request, 'menu.html')
+
+def bookings(request):
+    return render(request, 'bookings.html')
+
+def contact(request):
+    return render(request, 'contact.html')
 
 @login_required
 def booking_create(request):
