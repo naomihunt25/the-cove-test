@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Bookings</title>
-</head>
-<body>
-     <h1>All Bookings</h1>
-   
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Your Bookings</h1>
+  <a href="{% url 'booking_create' %}">Create New Booking</a>
+
   {% if bookings %}
     <ul>
       {% for booking in bookings %}
@@ -28,5 +24,3 @@
     <p>No bookings found.</p>
   {% endif %}
 {% endblock %}
-</body>
-</html>
