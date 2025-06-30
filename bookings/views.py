@@ -7,8 +7,7 @@ from django.http import HttpResponseForbidden
 
 # Create your views here.
 def index(request):
-    """Welcome/home page view"""
-    return render(request, 'index.html')  # Since it's directly in bookings/templates/
+    return render(request, 'bookings/index.html')
 
 @login_required
 def booking_create(request):
