@@ -14,5 +14,6 @@
     <p><strong>Time:</strong> {{ booking.booking_time }}</p>
     <p><strong>Message:</strong> {{ booking.message }}</p>
     <a href="{% url 'booking_list' %}">Back to all bookings</a>
+    <a href="{% url 'booking_update' pk=booking.pk %}">Edit Booking</a>
 </body>
 </html>
