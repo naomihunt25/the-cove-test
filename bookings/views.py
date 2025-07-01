@@ -92,8 +92,9 @@ def booking_list(request):
     return render(request, 'bookings/booking_list.html', {'bookings': bookings})
 
 
+
 def logout_view(request):
     if request.method == 'POST':
         logout(request)
         return redirect('home')  # Redirect to homepage after logout
-    return render(request, 'your_logout_template.html')  # Render the confirmation page for GET
+    return render(request, 'bookings/logout.html')  # Render the confirmation page for GET
