@@ -35,9 +35,60 @@
   <div class="row justify-content-center">
     <div class="col-12 col-md-8">
       <h1>Make a Booking</h1>
-      <form method="post">
+      <form method="post" novalidate>
         {% csrf_token %}
-        {{ form.as_p }}
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+            {{ form.first_name.label_tag(attrs={"class": "form-label"}) }}
+            {{ form.first_name }}
+            {% if form.first_name.errors %}
+              <div class="text-danger">{{ form.first_name.errors }}</div>
+            {% endif %}
+          </div>
+          <div class="col-12 col-lg-6 mb-3">
+            {{ form.last_name.label_tag(attrs={"class": "form-label"}) }}
+            {{ form.last_name }}
+            {% if form.last_name.errors %}
+              <div class="text-danger">{{ form.last_name.errors }}</div>
+            {% endif %}
+          </div>
+          <div class="col-12 mb-3">
+            {{ form.email.label_tag(attrs={"class": "form-label"}) }}
+            {{ form.email }}
+            {% if form.email.errors %}
+              <div class="text-danger">{{ form.email.errors }}</div>
+            {% endif %}
+          </div>
+          <div class="col-12 mb-3">
+            {{ form.phone_number.label_tag(attrs={"class": "form-label"}) }}
+            {{ form.phone_number }}
+            {% if form.phone_number.errors %}
+              <div class="text-danger">{{ form.phone_number.errors }}</div>
+            {% endif %}
+          </div>
+          <div class="col-12 col-lg-6 mb-3">
+            {{ form.booking_date.label_tag(attrs={"class": "form-label"}) }}
+            {{ form.booking_date }}
+            {% if form.booking_date.errors %}
+              <div class="text-danger">{{ form.booking_date.errors }}</div>
+            {% endif %}
+          </div>
+          <div class="col-12 col-lg-6 mb-3">
+            {{ form.booking_time.label_tag(attrs={"class": "form-label"}) }}
+            {{ form.booking_time }}
+            {% if form.booking_time.errors %}
+              <div class="text-danger">{{ form.booking_time.errors }}</div>
+            {% endif %}
+          </div>
+          <div class="col-12 mb-3">
+            {{ form.message.label_tag(attrs={"class": "form-label"}) }}
+            {{ form.message }}
+            {% if form.message.errors %}
+              <div class="text-danger">{{ form.message.errors }}</div>
+            {% endif %}
+          </div>
+        </div>
+
         <button type="submit" class="btn btn-primary w-100">Book now</button>
       </form>
     </div>
