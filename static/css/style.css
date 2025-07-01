@@ -43,7 +43,7 @@ h2 {
   padding-bottom: 2rem;
 }
 
-/* Buttons */
+/* Buttons 
 .custom-button-outline {
   border: 3px solid var(--secondary-color);
   padding: 7px 25px;
@@ -56,6 +56,23 @@ h2 {
   color: white;
   background-color: var(--secondary-color);
   transition: color 0.3s ease-in-out;
+} */
+
+/* Buttons */
+.btn.custom-button-outline {
+  border: 3px solid var(--secondary-color) !important;
+  padding: 7px 25px !important;
+  color: var(--secondary-color) !important;
+  text-decoration: none;
+  border-radius: 25px !important;
+  background-color: transparent !important;
+}
+
+.btn.custom-button-outline:hover {
+  color: white !important;
+  background-color: var(--secondary-color) !important;
+  transition: color 0.3s ease-in-out;
+  border-color: var(--secondary-color) !important;
 }
 
 /* Navbar */
