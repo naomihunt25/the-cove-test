@@ -17,10 +17,11 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from bookings import views as bookings_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('bookings.urls')),
-    path('bookings/', include('bookings.urls')),  # Keep this for /bookings/ URLs too
+    path('', bookings_views.home, name='home'),  # Main home page view explicitly here
+    path('bookings/', include('bookings.urls')), # bookings app URLs all start with /bookings/
     path('accounts/', include('django.contrib.auth.urls')),
 ]
