@@ -43,20 +43,6 @@ h2 {
   padding-bottom: 2rem;
 }
 
-/* Buttons 
-.custom-button-outline {
-  border: 3px solid var(--secondary-color);
-  padding: 7px 25px;
-  color: var(--secondary-color);
-  text-decoration: none;
-  border-radius: 25px;
-}
-
-.custom-button-outline:hover {
-  color: white;
-  background-color: var(--secondary-color);
-  transition: color 0.3s ease-in-out;
-} */
 
 /* Buttons */
 .btn.custom-button-outline {
@@ -82,7 +68,7 @@ h2 {
   color: var(--primary-color);
   font-size: 1rem;
   text-transform: uppercase;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
 }
 
 #navbar .logo {
