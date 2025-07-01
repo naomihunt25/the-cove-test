@@ -19,7 +19,7 @@ def contact(request):
     return render(request, 'bookings/contact.html')
 
 @login_required
-def booking_create(request):
+def booking_form(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():

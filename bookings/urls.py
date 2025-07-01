@@ -11,7 +11,7 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'), # /contact/
 
     # Booking-related URLs
-    path('bookings/new/', views.booking_create, name='booking_create'),      # /bookings/new/
+    path('bookings/new/', views.booking_form, name='booking_form'),
     path('bookings/success/', views.booking_success, name='booking_success'),# /bookings/success/
     path('bookings/<int:pk>/', views.booking_detail, name='booking_detail'), # /bookings/1/
     path('bookings/<int:pk>/edit/', views.booking_update, name='booking_update'),  # /bookings/1/edit/
