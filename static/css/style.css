@@ -68,7 +68,7 @@ h2 {
   color: var(--primary-color);
   font-size: 1rem;
   text-transform: uppercase;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 #navbar .logo {
