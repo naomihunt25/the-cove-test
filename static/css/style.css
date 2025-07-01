@@ -237,3 +237,18 @@ form {
     max-width: 800px;
   }
 }
+
+/* Debug: Force display of toggle button on mobile */
+@media (max-width: 991.98px) {
+  .navbar-toggler {
+    display: block !important;
+  }
+  
+  .navbar-collapse {
+    display: none !important;
+  }
+  
+  .navbar-collapse.show {
+    display: block !important;
+  }
+}
