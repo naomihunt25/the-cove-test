@@ -22,6 +22,6 @@ from bookings import views as bookings_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', bookings_views.home, name='home'),  # Main home page view explicitly here
-    path('bookings/', include('bookings.urls')), # bookings app URLs all start with /bookings/
+    path('bookings/', include('bookings.urls', namespace='bookings')),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
