@@ -1,0 +1,78 @@
+{% extends "base.html" %} {% block title %}About - The Cove{% endblock %}
+{%block content %}
+
+<!-- About page -->
+
+<header class="header container section">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1 class="lead display-6"><strong>About Us</strong></h1>
+      <p class="my-4 lead">
+        Tucked away in the quiet seaside village of Oceanscape,
+        <strong>The Cove</strong> is more than just a beach bar, it&#39;s a
+        little slice of salt-air serenity, built on a dream (and a fair bit of
+        sand in our shoes).<br /><br />
+        The idea for The Cove was born one windswept evening when two lifelong
+        friends, Ellie and Jack, were watching the tide roll in with fish and
+        chips on their laps and a bottle of local cider between them. As the sun
+        dipped below the horizon, Jack turned and said, “You know what
+        Oceanscape needs? A place where people can sit just like this, but with
+        better chairs, better drinks, and maybe a bit of music.”<br /><br />
+        That idea turned into scribbles on napkins, long talks by the fire, and
+        eventually, a leap of faith. After months of wrangling wood,
+        weatherproofing windows, and taste-testing far too many cocktails
+        (someone had to do it), <strong>The Cove</strong> opened its doors in
+        the summer of 2022.<br /><br />
+        We built this place for locals, sea-lovers, walkers, surfers, and anyone
+        who needs a breather. Our aim is simple: good food, great drinks,
+        friendly faces, and the kind of atmosphere where shoes are optional and
+        sunsets are celebrated.<br /><br />
+        Everything at The Cove is inspired by the sea, from our seasonal menu
+        and beachy cocktails to the driftwood décor and ocean views from every
+        table. Whether you&#39;re dropping in for lunch, catching golden hour on
+        the terrace, or staying late for live music, you&#39;re always
+        welcome.<br /><br />
+        So come as you are, bring your sandy feet and salty stories, we
+        can&#39;t wait to meet you.
+      </p>
+    </div>
+  </div>
+</header>
+
+<main>
+      <div style="display: flex; justify-content: center">
+        <table class="table table-striped custom-text-color" style="width: fit-content">
+          <thead>
+            <tr>
+              <th colspan="2" class="text-center">Opening Times</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday - Thursday</td>
+              <td>12pm - 9pm</td>
+            </tr>
+            <tr>
+              <td>Friday - Sunday</td>
+              <td>12pm - 10pm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div
+        class="map container section"
+        style="display: flex; justify-content: center"
+      >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5090.362018775492!2d-4.31590285248029!3d50.363179186302276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486c90ba88ea0989%3A0x11bd7bf46d330352!2sPortwrinkle%2C%20Torpoint!5e0!3m2!1sen!2suk!4v1750951206475!5m2!1sen!2suk"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </main>
+
+{% endblock %}
