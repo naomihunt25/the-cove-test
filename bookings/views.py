@@ -6,6 +6,8 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
+from django.contrib.auth import logout
+from django.shortcuts import redirect, render
 
 # Create your views here.
 def home(request):
@@ -88,3 +90,10 @@ def booking_list(request):
     else:
         bookings = Booking.objects.filter(user=request.user).order_by('-booking_date', '-booking_time')
     return render(request, 'bookings/booking_list.html', {'bookings': bookings})
+
+
+def logout_view(request):
+    if request.method == 'POST':
+        logout(request)
+        return redirect('home')  # Redirect to homepage after logout
+    return render(request, 'your_logout_template.html')  # Render the confirmation page for GET
