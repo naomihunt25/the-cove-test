@@ -72,12 +72,19 @@
             {% endif %}
           </div>
           <div class="col-12 col-lg-6 mb-3">
-            <label for="{{ form.booking_time.id_for_label }}" class="form-label">Booking Time</label>
-            {{ form.booking_time }}
-            {% if form.booking_time.errors %}
-              <div class="text-danger">{{ form.booking_time.errors }}</div>
-            {% endif %}
-          </div>
+  <label for="{{ form.booking_time.id_for_label }}" class="form-label">Booking Time</label>
+  {{ form.booking_time }}
+
+  <div class="form-text">
+    Please choose a time between 12:00 and 20:00 in 15-minute intervals (e.g., 12:00, 12:15, 12:30).
+  </div>
+
+  {% if form.booking_time.errors %}
+    <div class="text-danger mt-1">
+      {{ form.booking_time.errors.as_text|slice:": "|linebreaksbr }}
+    </div>
+  {% endif %}
+</div>
           <div class="col-12 mb-3">
             <label for="{{ form.message.id_for_label }}" class="form-label">Party size and any special requirements:</label>
             {{ form.message }}
