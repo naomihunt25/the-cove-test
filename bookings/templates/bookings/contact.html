@@ -1,85 +1,95 @@
-{% extends "bookings/base.html" %} 
+{% extends "bookings/base.html" %}
 
-{% block title %}Contact - Cove{% endblock %} {% block content %}
+{% block title %}Contact - Cove{% endblock %}
 
-<header class="header container section">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h1 class="lead display-6"><strong>Contact Us</strong></h1><br><br>
-          <p class ="lead">
-            Whether you're planning a visit to the Cornish coast, have a
-            question about our menu, or just want to say hello, we&#39;d love to
-            hear from you!<br /><br />
-            The team at the Cove is always happy to help, whether it&#39;s booking
-            a table, organising a special celebration, or checking if we&#39;ve
-            still got your favourite drink on tap (we probably do).<br /><br />
-            You can reach us by phone or email, whichever suits you best. If we
-            don&#39;t answer straight away, we&#39;re likely serving cocktails or
-            chasing seagulls off the terrace, but we&#39;ll get back to you as soon
-            as we can.<br /><br />
-            Got something on your mind? A quirky request? A lost flip-flop?
-            Don&#39;t be shy, pop us a message and we&#39;ll do our best to help.<br /><br />
-            We&#39;re here, rain or shine, and always up for a chat. Speak soon!
-          </p>
-        </div>
-      </div>
-    </header>
+{% block content %}
 
-    <main>
-      <!-- Contact us form section -->
-      <div id="contact-form" class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8">
-            <form action="success.html" method="GET">
-              <div class="row">
-                <div class="col-12 col-lg-6 mb-3">
-                  <label for="name" class="form-label">Full Name</label>
-                  <input
-                    class="form-control"
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                  />
-                </div>
-                <div class="col-12 col-lg-6 mb-3">
-                  <label for="number" class="form-label">Phone</label>
-                  <input
-                    class="form-control"
-                    id="number"
-                    name="number"
-                    type="number"
-                    required
-                  />
-                </div>
-                <div class="col-12 mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input
-                    class="form-control"
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                  />
-                </div>
-                <div class="col-12 mb-3">
-                  <label for="message" class="form-label">Message</label>
-                  <textarea
-                    class="form-control"
-                    rows="6"
-                    id="message"
-                    name="message"
-                    required
-                  ></textarea>
-                </div>
-              </div>
-              <button type="submit" class="btn custom-button-outline w-100">
-                Submit
-              </button>
-            </form>
+<header class="header container section py-5">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1 class="lead display-6"><strong>Contact Us</strong></h1>
+      <p class="lead mt-4">
+        Whether you're planning a visit to the Cornish coast, have a
+        question about our menu, or just want to say hello, we&#39;d love to
+        hear from you!
+      </p>
+      <p class="lead mt-4">
+        The team at the Cove is always happy to help, whether it&#39;s booking
+        a table, organising a special celebration, or checking if we&#39;ve
+        still got your favourite drink on tap (we probably do).
+      </p>
+      <p class="lead mt-4">
+        You can reach us by phone or email, whichever suits you best. If we
+        don&#39;t answer straight away, we&#39;re likely serving cocktails or
+        chasing seagulls off the terrace, but we&#39;ll get back to you as soon
+        as we can.
+      </p>
+      <p class="lead mt-4">
+        Got something on your mind? A quirky request? A lost flip-flop?
+        Don&#39;t be shy, pop us a message and we&#39;ll do our best to help.
+      </p>
+      <p class="lead mt-4">
+        We&#39;re here, rain or shine, and always up for a chat. Speak soon!
+      </p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Contact us form section -->
+  <div id="contact-form" class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8">
+        <form action="success.html" method="GET">
+          <div class="row">
+            <div class="col-12 col-lg-6 mb-4">
+              <label for="name" class="form-label">Full Name</label>
+              <input
+                class="form-control"
+                id="name"
+                name="name"
+                type="text"
+                required
+              />
+            </div>
+            <div class="col-12 col-lg-6 mb-4">
+              <label for="number" class="form-label">Phone</label>
+              <input
+                class="form-control"
+                id="number"
+                name="number"
+                type="number"
+                required
+              />
+            </div>
+            <div class="col-12 mb-4">
+              <label for="email" class="form-label">Email</label>
+              <input
+                class="form-control"
+                id="email"
+                name="email"
+                type="email"
+                required
+              />
+            </div>
+            <div class="col-12 mb-4">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                rows="6"
+                id="message"
+                name="message"
+                required
+              ></textarea>
+            </div>
           </div>
-        </div>
+          <button type="submit" class="btn custom-button-outline w-100">
+            Submit
+          </button>
+        </form>
       </div>
-    </main>
+    </div>
+  </div>
+</main>
 
-    {% endblock %}
+{% endblock %}
