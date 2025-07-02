@@ -1,12 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking success</title>
-</head>
-<body>
-  <h1>Thank you!</h1>
-  <p>Your booking has been received.</p>
-</body>
-</html>
+{% extends "bookings/base.html" %} 
+
+{% block title %}Booking Success - Cove{% endblock %} {% block content %}
+
+<!-- Success page page -->
+
+<main class="container section">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1 class="lead display-6"><strong>You're in</strong></h1>
+      <p class="my-4 lead">
+        Your booking has been received.
+      </p>
+       <a href="{% url 'booking_list' %}" class="btn custom-button-outline">Amend or Cancel Booking</a>
+    </div>
+  </div>
+</main>
+
+
+{% endblock %}
