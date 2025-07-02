@@ -148,7 +148,7 @@ form {
 }
 
 form.delete {
-    outline: none;
+    border: none; !
 }
 
 
