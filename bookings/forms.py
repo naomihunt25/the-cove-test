@@ -20,12 +20,12 @@ class BookingForm(forms.ModelForm):
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
             'phone_number': forms.TextInput(attrs={'class': 'form-control'}),
             'booking_date': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
-            'booking_time': forms.TimeInput(attrs={
+             'booking_time': forms.TimeInput(attrs={
                 'type': 'time',
                 'class': 'form-control',
-                'min': '12:00',
-                'max': '20:00',
-                'step': '900',  # 15-minute intervals
+                'min': '12:00',    # restrict minimum time to 12pm
+                'max': '20:00',    # restrict maximum time to 8pm
+                'step': '900',     # step 900 seconds = 15 minutes interval
             }),
             'message': forms.Textarea(attrs={'class': 'form-control', 'rows': 6}),
         }
