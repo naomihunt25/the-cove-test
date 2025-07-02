@@ -73,10 +73,11 @@
           </div>
           <div class="col-12 col-lg-6 mb-3">
   <label for="{{ form.booking_time.id_for_label }}" class="form-label">Booking Time</label>
+  
   {{ form.booking_time }}
-
+  
   <div class="form-text">
-    Please choose a time between 12:00 and 20:00 in 15-minute intervals (e.g., 12:00, 12:15, 12:30).
+    Please select a time between 12:00 PM and 8:00 PM in 15-minute intervals.
   </div>
 
   {% if form.booking_time.errors %}

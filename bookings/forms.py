@@ -14,21 +14,16 @@ class BookingForm(forms.ModelForm):
             'booking_time', 
             'message',
         ]
+
         widgets = {
-            'first_name': forms.TextInput(attrs={'class': 'form-control'}),
-            'last_name': forms.TextInput(attrs={'class': 'form-control'}),
-            'email': forms.EmailInput(attrs={'class': 'form-control'}),
-            'phone_number': forms.TextInput(attrs={'class': 'form-control'}),
-            'booking_date': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
-             'booking_time': forms.TimeInput(attrs={
-                'type': 'time',
-                'class': 'form-control',
-                'min': '12:00',    # restrict minimum time to 12pm
-                'max': '20:00',    # restrict maximum time to 8pm
-                'step': '900',     # step 900 seconds = 15 minutes interval
-            }),
-            'message': forms.Textarea(attrs={'class': 'form-control', 'rows': 6}),
-        }
+    'first_name': forms.TextInput(attrs={'class': 'form-control'}),
+    'last_name': forms.TextInput(attrs={'class': 'form-control'}),
+    'email': forms.EmailInput(attrs={'class': 'form-control'}),
+    'phone_number': forms.TextInput(attrs={'class': 'form-control'}),
+    'booking_date': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
+    'message': forms.Textarea(attrs={'class': 'form-control', 'rows': 6}),
+}
+        
 
     def clean_booking_time(self):
         booking_time = self.cleaned_data['booking_time']
