@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-12 text-center">
       <h1 class="lead display-6"><strong>Booking Details</strong></h1>
-      <p class="my-4 lead">Here’s a summary of your reservation at The Cove.</p>
+      <p class="my-4 lead">We are excited to welcome you to the Cove! Here's your booking summary:</p>
     </div>
   </div>
 </header>
@@ -38,7 +38,7 @@
         {% endif %}
 
         {% if booking.user == request.user or request.user.is_staff %}
-        <div class="mt-4 d-flex flex-wrap gap-2">
+        <div class="col-6 d-flex justify-content-center">
           <a href="{% url 'booking_update' booking.pk %}" class="btn custom-button-outline">Edit Booking</a>
           <form action="{% url 'booking_delete' booking.pk %}" method="POST" class="delete" onsubmit="return confirm('Are you sure you want to delete this booking?');">
             {% csrf_token %}
@@ -47,7 +47,7 @@
         </div>
         {% endif %}
 
-        <div class="mt-4">
+        <div class="mt-4 justify-content-center">
           <a href="{% url 'booking_list' %}" class="btn custom-button-outline">Back to My Bookings</a>
         </div>
       </div>
