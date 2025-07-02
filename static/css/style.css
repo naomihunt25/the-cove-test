@@ -43,6 +43,9 @@ h2 {
   padding-bottom: 2rem;
 }
 
+a {
+  text-decoration: none; /* Removes underline */
+}
 
 /* Buttons */
 .btn.custom-button-outline {
