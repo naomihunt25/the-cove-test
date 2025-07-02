@@ -1,4 +1,5 @@
 from django import forms
+from datetime import time
 from .models import Booking
 
 class BookingForm(forms.ModelForm):
@@ -19,6 +20,25 @@ class BookingForm(forms.ModelForm):
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
             'phone_number': forms.TextInput(attrs={'class': 'form-control'}),
             'booking_date': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
-            'booking_time': forms.TimeInput(attrs={'type': 'time', 'class': 'form-control'}),
+            'booking_time': forms.TimeInput(attrs={
+                'type': 'time',
+                'class': 'form-control',
+                'min': '12:00',
+                'max': '20:00',
+                'step': '900',  # 15-minute intervals
+            }),
             'message': forms.Textarea(attrs={'class': 'form-control', 'rows': 6}),
         }
+
+    def clean_booking_time(self):
+        booking_time = self.cleaned_data['booking_time']
+
+        if not (time(12, 0) <= booking_time <= time(20, 0)):
+            raise forms.ValidationError("Time must be between 12:00 and 20:00.")
+
+        if booking_time.minute % 15 != 0 or booking_time.second != 0:
+            raise forms.ValidationError(
+                "Please choose a time in 15-minute intervals, e.g., 12:00, 12:15, 12:30."
+            )
+
+        return booking_time
