@@ -204,14 +204,6 @@ form.delete {
 #contact .social-favicons a {
   text-decoration: none;       /* remove underline */
   outline: none;               /* remove dotted blue outline */
-  box-shadow: none;            /* remove browser glow */
-  line-height: 0;              /* remove any inline height that creates spacing */
-}
-
-#contact .social-favicons a:focus,
-#contact .social-favicons a:active {
-  outline: none;
-  box-shadow: none;
 }
 
 /* Copyright section */
