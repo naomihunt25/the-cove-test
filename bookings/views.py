@@ -7,7 +7,6 @@ from django.http import HttpResponseForbidden
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth import logout
-from django.shortcuts import redirect, render
 
 # Create your views here.
 def home(request):
@@ -92,9 +91,8 @@ def booking_list(request):
     return render(request, 'bookings/booking_list.html', {'bookings': bookings})
 
 
-
 def logout_view(request):
     if request.method == 'POST':
         logout(request)
-        return redirect('home')  # Redirect to homepage after logout
-    return render(request, 'bookings/logout.html')  # Render the confirmation page for GET
+        return redirect('home')  # Redirect after logout
+    return render(request, 'bookings/logout.html')  # Your confirmation page
