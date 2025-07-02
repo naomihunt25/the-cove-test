@@ -36,4 +36,6 @@ class BookingForm(forms.ModelForm):
     def clean_booking_time(self):
         booking_time = self.cleaned_data.get('booking_time')
         valid_times = [choice[0] for choice in self.TIME_CHOICES]
-        if booking_time not i_
+        if booking_time not in valid_times:
+            raise forms.ValidationError("Please select a valid booking time.")
+        return booking_time
