@@ -43,10 +43,6 @@ h2 {
   padding-bottom: 2rem;
 }
 
-a {
-  text-decoration: none; /* Removes underline */
-}
-
 /* Buttons */
 .btn.custom-button-outline {
   border: 3px solid var(--secondary-color) !important;
@@ -203,6 +199,19 @@ form.delete {
 #contact .social-favicons i:hover {
   color: var(--primary-color);
   transition: color 0.3s ease-in-out;
+}
+
+#contact .social-favicons a {
+  text-decoration: none;       /* remove underline */
+  outline: none;               /* remove dotted blue outline */
+  box-shadow: none;            /* remove browser glow */
+  line-height: 0;              /* remove any inline height that creates spacing */
+}
+
+#contact .social-favicons a:focus,
+#contact .social-favicons a:active {
+  outline: none;
+  box-shadow: none;
 }
 
 /* Copyright section */
