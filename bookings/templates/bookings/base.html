@@ -78,27 +78,21 @@
       <a class="nav-link" href="{% url 'menu' %}">Menu</a>
     </li>
 
-    {% if not user.is_authenticated %}
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'booking_form' %}">Make a Booking</a>
-    </li>
-    {% endif %}
-
-    <li class="nav-item">
+  <li class="nav-item">
       <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
     </li>
 
     {% if user.is_authenticated %}
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'booking_list' %}">My Bookings</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-    </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'booking_list' %}">My Bookings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+      </li>
     {% else %}
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'login' %}">Login</a>
-    </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'booking_form' %}">Make a Booking</a>
+      </li>
     {% endif %}
   </ul>
 </div>
