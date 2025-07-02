@@ -1,22 +1,23 @@
-{% extends "bookings/base.html" %} {% block content %}
+{% extends "bookings/base.html" %} 
+{% block content %}
 <main>
   <div class="container section">
     <div class="row justify-content-center">
       <div class="col-12 col-md-6">
-       <form method="POST">
-  {% csrf_token %}
-  <div class="row">
-      <h1 class="lead display-6 col-12 text-center"></h1>"><strong>Are you sure you want to log out?</strong></h1><br>
-    <div class="col-6 d-flex justify-content-center">
-      <button type="submit" class="btn custom-button-outline">
-        Yes, log out
-      </button>
-    </div>
-    <div class="col-6 d-flex justify-content-center">
-      <a href="{% url 'home' %}" class="btn custom-button-outline">Cancel</a>
-    </div>
-  </div>
-</form>
+        <h1 class="lead display-6 text-center mb-4"><strong>Are you sure you want to log out?</strong></h1>
+        <form method="POST">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-6 d-flex justify-content-center">
+              <button type="submit" class="btn custom-button-outline">
+                Yes, log out
+              </button>
+            </div>
+            <div class="col-6 d-flex justify-content-center">
+              <a href="{% url 'home' %}" class="btn custom-button-outline">Cancel</a>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
