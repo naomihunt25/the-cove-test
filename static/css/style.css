@@ -148,7 +148,10 @@ form {
 }
 
 form.delete {
-    border: none; !important;
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    padding: 0 !important;
 }
 
 
