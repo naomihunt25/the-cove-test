@@ -1,57 +1,73 @@
-{% extends "bookings/base.html" %}
-{% load static %}
-
-{% block title %}Menu - Cove{% endblock %}
-
-{% block content %}
+{% extends "bookings/base.html" %} {% load static %} {% block title %}Menu -
+Cove{% endblock %} {% block content %}
 <!-- Menu page -->
 
-<header class="header container section">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h1 class="lead display-6"><strong>Menu</strong></h1>
-          <p class="my-4 lead">
-            Welcome to the flavour of the <strong>Cove</strong>, where the sea breeze inspires
-            every bite and sip. <br /><br />
-            Our menu is a celebration of the coast: fresh, vibrant, and made to
-            be savoured. From laid-back lunches on the terrace to indulgent
-            dinners under the fairy lights, we&#39;ve crafted something for
-            every appetite and occasion. <br /><br />
-            Whether you&#39;re craving our signature loaded nachos, a
-            perfectly grilled steak, or one of our mouthwatering burgers,
-            we&#39;ve got you covered. And don't forget to explore our
-            handpicked wine list and creative cocktails, best enjoyed with a sea
-            view and good company. <br /><br />
-            Dive in and discover your new favourites.
-          </p>
-        </div>
-      </div>
-    </header>
+<header class="header container section py-5">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1 class="lead display-6"><strong>Menu</strong></h1>
+      <p class="my-4 lead">
+        At the <strong>Cove</strong>, we believe good food feels like home. Our
+        menu is packed with comforting classics made from the freshest
+        ingredients, perfect for sharing or savoring solo.
+      </p>
+      <p class="my-4 lead">
+        From hearty, slow-cooked dishes to crisp, vibrant salads, every plate is
+        crafted with care. Whether you're here for a relaxed lunch or a cosy
+        evening meal, there&#39;s something to warm your soul.
+      </p>
+      <p class="my-4 lead">
+        Don&#39;t forget to pair your meal with one of our freshly shaken
+        cocktails or a glass from our thoughtfully selected wine list — ideal
+        companions for good company and sea views.
+      </p>
+      <p class="my-4 lead">Come hungry, leave happy.</p>
+    </div>
+  </div>
+</header>
 
-     <!-- Carousel -->
-    <main class="container my-5">
-      <div
-        id="carouselExampleControls"
-        class="carousel slide mx-auto silas-carousel"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="{% static 'images/cove_menu_food.webp' %}" alt="First slide" />
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="{% static 'images/cove_menu_drinks.webp' %}" alt="Second slide" />
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+<main class="container my-5">
+  <div
+    id="carouselExampleControls"
+    class="carousel slide mx-auto silas-carousel"
+    data-bs-ride="carousel"
+    aria-label="Image carousel showcasing Cove food and drinks menu"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          class="d-block w-100"
+          src="{% static 'images/cove_menu_food.webp' %}"
+          alt="Assortment of Cove's comforting food dishes"
+        />
       </div>
-    </main>
+      <div class="carousel-item">
+        <img
+          class="d-block w-100"
+          src="{% static 'images/cove_menu_drinks.webp' %}"
+          alt="Cove's fresh cocktails and drinks"
+        />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</main>
 
-    {% endblock %}
+{% endblock %}

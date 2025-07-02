@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +8,7 @@
     {% block meta_description %}
     <meta
       name="description"
-      content="The Cove at Oceanscape - Cornwall's ultimate beach bar destination."
+      content="The Cove at Oceanscape — Cornwall&#39;s premier beach bar offering food, cocktails, and stunning sea views."
     />
     {% endblock %}
     <title>{% block title %}Cove{% endblock %}</title>
@@ -77,26 +78,24 @@
     <li class="nav-item">
       <a class="nav-link" href="{% url 'menu' %}">Menu</a>
     </li>
-
-  <li class="nav-item">
+    <li class="nav-item">
       <a class="nav-link" href="{% url 'contact' %}">Contact</a>
     </li>
-
     {% if user.is_authenticated %}
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'booking_list' %}">My Bookings</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-      </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'booking_list' %}">My Bookings</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+    </li>
     {% else %}
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'booking_form' %}">Make a Booking</a>
-      </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'booking_form' %}">Make a Booking</a>
+    </li>
     {% endif %}
   </ul>
 </div>
-    </nav>
+</nav>
 
     <!-- Main content -->
     {% block content %}{% endblock %}
@@ -106,11 +105,11 @@
       <div class="container">
         <div class="row justify-content-center text-center">
           <div class="col-12">
-            <h2 class="display-6">Contact Us</h2>
+            <h2 class="display-6">Say Hello</h2>
           </div>
           <div class="col-12">
             <address>
-              <p >
+              <p>
                 <i class="fa-solid fa-location-dot"></i> Cove<br />
                 123 Beachtown<br />Oceanscape<br />Cornwall<br />BEACH 789<br />
               </p>
