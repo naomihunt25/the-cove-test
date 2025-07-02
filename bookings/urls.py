@@ -18,7 +18,7 @@ urlpatterns = [
     path('bookings/', views.booking_list, name='booking_list'),  # /bookings/
 
     # Auth URLs - login/logout/sign_up all here
-    path('accounts/login/', auth_views.LoginView.as_view(template_name='bookings/login.html'), name='login'),
+    path('login/', auth_views.LoginView.as_view(template_name='bookings/login.html'), name='login'),
     path('logout/', views.logout_view, name='logout'),
-    path('accounts/sign_up/', views.sign_up, name='sign_up'),
+    path('sign_up/', views.sign_up, name='sign_up'),
 ]
