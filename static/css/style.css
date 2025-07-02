@@ -148,7 +148,7 @@ form {
 }
 
 form.delete {
-    border: none; !
+    border: none; !important;
 }
 
 
