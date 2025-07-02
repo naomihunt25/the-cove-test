@@ -11,7 +11,6 @@ class BookingForm(forms.ModelForm):
             'email', 
             'phone_number', 
             'booking_date', 
-            'booking_time', 
             'message',
         ]
 
@@ -25,15 +24,9 @@ class BookingForm(forms.ModelForm):
 }
         
 
-    def clean_booking_time(self):
+       def clean_booking_time(self):
         booking_time = self.cleaned_data['booking_time']
-
-        if not (time(12, 0) <= booking_time <= time(20, 0)):
-            raise forms.ValidationError("Time must be between 12:00 and 20:00.")
-
-        if booking_time.minute % 15 != 0 or booking_time.second != 0:
-            raise forms.ValidationError(
-                "Please choose a time in 15-minute intervals, e.g., 12:00, 12:15, 12:30."
-            )
-
+        valid_times = [choice[0] for choice in self.TIME_CHOICES]
+        if booking_time not in valid_times:
+            raise forms.ValidationError("Please select a valid booking time.")
         return booking_time
